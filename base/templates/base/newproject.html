@@ -28,6 +28,37 @@
     <div>
         <p>With this we can create our django app successfully. Now we can use python manage.py runserver.</p>
     </div>
+
+    <div>
+        <p>Now after our app hase been created we need to keep our [appname].apps.BaseConfig in INSTALLED_APPS so it can
+            be used.</p>
+    </div>
+
+    <div>
+        <p>And if we have templates outside of app then we need to define it in templates DIRS as Base_dir / 'templates'
+        </p>
+    </div>
+
+    <div>
+        <p>For static files use following in settings.py</p>
+        <p>
+            STATIC_URL = 'static/'
+
+            STATICFILES_DIRS = [
+            BASE_DIR / 'static'
+            ]
+
+            MEDIA_URL = '/images/'
+
+            MEDIA_ROOT = BASE_DIR / 'static/images'
+        </p>
+    </div>
+
+    <div>
+        <p>now after all things are set up. use "python manage.py migrate" to migrate unappiled migrations</p>
+        <p>python manage.py makemigrations to finally migrate to db</p>
+        <p>python manage.py createsuperuser to create a super user for login in django built in admin panel</p>
+    </div>
 </div>
 
 {% endblock content %}

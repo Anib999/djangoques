@@ -5,3 +5,7 @@ from django.shortcuts import render
 def newproject(request):
     context = {}
     return render(request, 'base/newproject.html', context)
+
+def interview(request):
+    context = {}
+    return render(request, 'base/interview.html', context)
